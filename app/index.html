@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Form step by step</title>
+    <link rel="stylesheet" href="css/style.css">   
+      
+</head>
+<body>
+    <!-- multistep form -->
+<form role="form" id="msform" action="" name="registration">
+	<!-- progressbar -->
+	<ul id="progressbar">
+		<li class="active">Step 1</li>
+		<li>Step 2</li>
+		<li>Step 3</li>
+	</ul>
+	<!-- fieldsets -->
+	<fieldset>
+		<h3 class="fs-title">Step 1</h3>
+		<input id="amount" type="number" name="amount" placeholder="1 to 10000" min="1" max="10000"/>
+		<input id="Period" type="number" placeholder="Period 1 to 12" name="Period" min="1" max="12" />
+		<input type="button" name="next" class="next action-button" value="Next" />
+		<!-- <button class="next "></button> -->
+	</fieldset>
+	<fieldset>
+		<h3 class="fs-title">Step 2</h3>
+		<input id="Code" type="number" placeholder="ИНН" name="Code" pattern="[0-9]{10}" />
+		<input id="Surname" type="text" placeholder="Фамилия" name="Surname"/>
+		<input id="Name" type="text" placeholder="Имя" name="Name" />
+		<input type="text" id="City" placeholder="Город" name="City" options="options" />
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button validate" value="Next" />
+	</fieldset>
+	<fieldset>
+		<h3 class="fs-title">Step 3</h3>
+		<div>Введённые данные</div>
+		<ul class="value-form">
+			
+		</ul>
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="submit" name="submit" class="submit action-button" value="Submit" />
+	</fieldset>
+</form>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>   
+	<script src='http://thecodeplayer.com/uploads/js/jquery.easing.min.js'></script>
+	<script src="js/index.js"></script>
+	<script src="js/validate.js"></script>
+	<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script> -->
+	<link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.10.3/themes/flick/jquery-ui.css" />
+ 	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+ 	<script src="js/getCity.js"></script>
+	<script src="js/moment.js"></script>
+
+</body>
+</html>
